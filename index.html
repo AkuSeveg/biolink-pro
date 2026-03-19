@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioLink Builder Pro | White-Label SaaS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-box">
+                <i class="ri-links-line"></i>
+            </div>
+            <h1>𝐁𝐢𝐨𝐋𝐢𝐧𝐤 <span class="badge">BUILDER</span></h1>
+        </div>
+        <div class="nav-actions">
+            <button id="export-btn" class="btn-primary">
+                <i class="ri-download-cloud-2-line"></i> DOWNLOAD BIOLINK HTML
+            </button>
+        </div>
+    </nav>
+
+    <main class="builder-container">
+        
+        <section class="editor-panel">
+            <div class="panel-header">
+                <h2><i class="ri-settings-4-line"></i> Konfigurasi Profil</h2>
+                <p>Edit data di bawah ini, hasil akan langsung terlihat di layar HP.</p>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label>Nama / Brand</label>
+                    <input type="text" id="input-name" placeholder="Contoh: Alex Carter" value="Alex Carter">
+                </div>
+                
+                <div class="form-group">
+                    <label>Deskripsi Singkat (Bio)</label>
+                    <textarea id="input-bio" rows="2" placeholder="Contoh: Digital Creator & Tech Enthusiast">Digital Creator & Tech Enthusiast</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>URL Foto Profil</label>
+                    <input type="url" id="input-photo" placeholder="https://link-foto-anda.jpg" value="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex">
+                </div>
+            </div>
+
+            <div class="panel-header" style="margin-top: 2rem;">
+                <h2><i class="ri-palette-line"></i> Tampilan & Tema</h2>
+            </div>
+            
+            <div class="form-section">
+                <div class="form-group">
+                    <label>Pilih Tema Premium</label>
+                    <select id="input-theme">
+                        <option value="theme-glass">Glassmorphism (Modern)</option>
+                        <option value="theme-dark">Dark Cyberpunk</option>
+                        <option value="theme-clean">Clean Minimalist (Light)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="panel-header" style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h2><i class="ri-link-m"></i> Tautan (Links)</h2>
+                </div>
+                <button id="add-link-btn" class="btn-secondary btn-small">
+                    <i class="ri-add-line"></i> TAMBAH LINK
+                </button>
+            </div>
+
+            <div id="links-container" class="form-section">
+                <!-- List link akan di-generate oleh JavaScript di sini -->
+            </div>
+        </section>
+
+        <section class="preview-panel">
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-screen" id="live-preview">
+                    <!-- Tampilan Biolink Live akan dirender di sini -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="builder.js"></script>
+</body>
+                  </html>
